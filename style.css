@@ -1,0 +1,60 @@
+html, body {
+  padding, margin: 0;
+}
+
+#heading {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  padding: 15px;
+  width: 300px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: cyan;
+  text-align: center;
+  height: 1700px;
+}
+
+p {
+  font-size: 110%;
+  margin: 11px;
+  padding: 10px;
+}
+
+div {
+  background-color: royalblue;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  border: 3px solid black;
+}
+
+nav ul li a {
+  border: 2px solid blue;
+  background-color: midnightblue;
+  color: skyblue;
+  padding: 20px;
+  margin: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: midnightblue;
+  background-color: skyblue;
+}
+
+article {
+  background-image: url(images/holy-light-edit.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  height: 500px;
+  margin: 0 0 0 0;
+}
