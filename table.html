@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="table-style.css">
+    
+    <style>
+      h1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+h1 {
+  position: relative;
+  font-size: 5rem;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  font-family: system-ui, sans-serif;
+}
+
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+      
+      table {
+        border-collapse: collapse;
+        border: 2px solid;
+        color: midnightblue;
+        font-size: 130%;
+      }
+      
+      thead th {
+        background-color: cyan;
+      }
+      
+      th {
+        font-size: 150%;
+        border: solid;
+        padding: 10px;
+      }
+      
+      td {
+        padding: 15px;
+        border: solid;
+      }
+        
+    </style>
+    
+  </head>
+  
+  <body>
+    <h1>Brawlers' Favorites</h1>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Bralwer</th>
+          <th>Food</th>
+          <th>Movie or TV shows</th>
+          <th>Place to visit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Shelly</th>
+          <td>Shit</td>
+          <td>Criminal Minds</td>
+          <td>McDonald's</td>
+        </tr>
+        <tr>
+          <th>El Primo</th>
+          <td>Veggie burger</td>
+          <td>Magic School Bus</td>
+          <td>Playground</td>
+        </tr>
+        <tr>
+          <th>Colt</th>
+          <td>Fried rice</td>
+          <td>Ip man</td>
+          <td>Subway station</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </body>
+</html>
