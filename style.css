@@ -1,25 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #heading {
   background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   padding: 15px;
-  width: 300px;
-  height: 40px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
 }
-/*
-body {
-  background-color: cyan;
-  text-align: center;
-  Mobile version doesn't work
-  height: 1700px;
-}
-*/
+
 p {
   font-size: 110%;
   margin: 11px;
   padding: 10px;
   color: skyblue;
+  text-align: center;
 }
 
 div {
@@ -38,8 +41,10 @@ nav ul {
   display: flex;
   border: 3px solid midnightblue;
   border-radius: 15px;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap;*/
   padding: 0;
+  align-items: stretch;
+  align-content: stretch;
 }
 
 nav ul li a {
@@ -53,6 +58,8 @@ nav ul li a {
   font-size: 1.5em;
   display: flex;
   flex: 1 auto;
+  flex-wrap: wrap;
+  align-content: stretch;
 }
 
 nav ul li a:hover {
@@ -60,23 +67,40 @@ nav ul li a:hover {
   background-color: skyblue;
 }
 
-article {
-  background-image: url(images/holy-light-edit.jpg);
+.background {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   height: 500px;
-  width: 100%;
+  /*width: 100%;*/
   margin: 0 0 0 0;
 }
 
+.first {
+  background-image: url(images/holy-light-edit.jpg);
+}
+
+.second {
+  background-image: url(images/bad-ventilation.jpg);
+}
+
 .container {
-  min-height: 100vh;
-  width: 100%;
+  min-height: 90vh;
   margin: 0;
   text-align: center;
 }
-/* Forms */
-body {
-  margin: 0;
+
+.break {
+  min-height: 10vh;
+}
+
+#duct {
+  width: 70%;
+}
+
+@media screen and (max-width: 70em) {
+  nav ul {
+    display: block;
+  }
 }
